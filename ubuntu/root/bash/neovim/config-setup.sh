@@ -6,8 +6,9 @@ apt-get upgrade -y
 apt-get install -y \
 git \
 make \
+cmake \
 gcc \
 ripgrep \
 fonts-noto-color-emoji
 
-git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/saledh/nvim-config ~/.config/nvim

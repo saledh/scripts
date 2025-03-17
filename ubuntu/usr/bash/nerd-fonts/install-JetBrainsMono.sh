@@ -1,10 +1,9 @@
 #!/bin/bash
 
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 
-apt-get install -y \
-neovim \
+sudo apt-get install -y \
 wget \
 unzip \
 fontconfig \
@@ -19,10 +18,10 @@ wget -O "$TEMP_DIR/font.zip" "https://github.com/ryanoasis/nerd-fonts/releases/d
 unzip "$TEMP_DIR/font.zip" -d "$TEMP_DIR"
 
 # Move the font files to the system fonts directory
-mv "$TEMP_DIR"/*.{ttf,otf} /usr/local/share/fonts/
+sudo mv "$TEMP_DIR"/*.{ttf,otf} /usr/local/share/fonts/
 
 # Update the font cache
 fc-cache -f -v
 
 # Clean up
-rm -rf "$TEMP_DIR"
+sudo rm -rf "$TEMP_DIR"
